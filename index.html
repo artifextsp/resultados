@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPRENDE SMART - Programa de IA para Emprendimientos - Pradera, Valle del Cauca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d5a8c;
+            --accent: #e63946;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fefefe;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            margin-right: 12px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header-decoration {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+        
+        /* Introduction */
+        .intro {
+            padding: 2.5rem 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .intro-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .intro-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .intro-text p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .intro-image {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            color: white;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .intro-image i {
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .intro-image h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Results */
+        .results {
+            padding: 2.5rem 0;
+        }
+        
+        .results-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        .order-notice {
+            background-color: #fff9e6;
+            border-left: 4px solid #ffcc00;
+            padding: 1rem;
+            margin-bottom: 1.8rem;
+            border-radius: var(--border-radius);
+            font-style: italic;
+        }
+        
+        .winner-section {
+            background: linear-gradient(to right, #fff9e6, #fff4d6);
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid #ffcc00;
+        }
+        
+        .winner-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            color: #b8860b;
+            flex-wrap: wrap;
+        }
+        
+        .winner-title i {
+            font-size: 1.8rem;
+            margin-right: 12px;
+        }
+        
+        .winner-title h2 {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        
+        .winner-info {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .winner-detail {
+            display: flex;
+            align-items: center;
+        }
+        
+        .winner-detail i {
+            color: #b8860b;
+            margin-right: 10px;
+            font-size: 1.1rem;
+            min-width: 20px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        @media (min-width: 576px) {
+            .project-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        
+        .project-name {
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        
+        @media (min-width: 576px) {
+            .project-name {
+                margin-bottom: 0;
+            }
+        }
+        
+        .project-link {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+        
+        .project-link:hover {
+            background-color: var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .project-link i {
+            margin-right: 5px;
+        }
+        
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        @media (max-width: 480px) {
+            .criteria-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .criterion {
+            background-color: var(--light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+        }
+        
+        .criterion-name {
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+        
+        .criterion-score {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .total-score {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: var(--border-radius);
+            margin-top: 1.2rem;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        /* Acknowledgments */
+        .acknowledgments {
+            padding: 2.5rem 0;
+            background-color: var(--light);
+        }
+        
+        .people-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 1.8rem;
+        }
+        
+        @media (min-width: 768px) {
+            .people-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+        
+        .person-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.3rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .person-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.8rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .person-name {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+        }
+        
+        .person-role {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0 1.2rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .municipality-logo {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-text {
+            max-width: 800px;
+            margin-bottom: 1.2rem;
+        }
+        
+        .footer-text h3 {
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.2rem;
+            width: 100%;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
+            }
+            
+            .winner-title h2 {
+                font-size: 1.4rem;
+            }
+            
+            .project-name {
+                font-size: 1.2rem;
+            }
+            
+            .project-card {
+                padding: 1.2rem;
+            }
+            
+            .intro, .results, .acknowledgments {
+                padding: 2rem 0;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        /* Mobile menu toggle (for future use) */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: absolute;
+            top: 1.5rem;
+            right: 1rem;
+        }
+        
+        @media (max-width: 480px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-decoration"></div>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <i class="fas fa-brain logo"></i>
+                    <div>
+                        <h1>EMPRENDE SMART</h1>
+                        <p class="subtitle">Programa de Inteligencia Artificial para Emprendimientos de Pradera, Valle del Cauca</p>
+                    </div>
+                </div>
+                <p class="subtitle">Resultados de Evaluación - Ciclo de Formación 2023</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <div class="container">
+            <h2 class="section-title">Formación en IA para el Ecosistema Emprendedor</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>El programa <span class="highlight">EMPRENDE SMART</span> de formación en Inteligencia Artificial aplicada al ecosistema de emprendimientos de Pradera, Valle del Cauca, ha sido una iniciativa transformadora para nuestro municipio. Durante varias semanas, emprendedores locales han adquirido conocimientos y herramientas tecnológicas de vanguardia que marcarán la diferencia en sus negocios.</p>
+                    <p>Liderado por el <span class="highlight">Departamento de Desarrollo Económico</span> y gracias a la dedicación de la profesional <span class="highlight">Angélica Rangel</span>, este programa ha hecho posible que nuestros emprendedores incorporen técnicas de IA en sus operaciones, marketing y estrategias de crecimiento.</p>
+                    <p>Ahora cuentan con una tecnología y técnicas que <span class="highlight">marcan la diferencia en el mercado</span> y que seguro les darán ventajas competitivas. Los animamos a seguir profundizando y practicando lo aprendido, y sobre todo a tomar estos resultados como información valiosa que les invita a ser cada vez mejores en lo que hacen.</p>
+                </div>
+                <div class="intro-image">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Transformación Digital</h3>
+                    <p>Potenciando emprendimientos locales con tecnología de vanguardia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results">
+        <div class="container">
+            <h2 class="section-title">Resultados de Evaluación</h2>
+            <div class="results-intro">
+                <p>A continuación presentamos los resultados parciales de la evaluación de los proyectos finales. Cada emprendimiento fue evaluado según criterios específicos de innovación, implementación técnica, viabilidad y presentación.</p>
+                <div class="order-notice">
+                    <p><strong>Nota importante:</strong> El orden en que aparecen los proyectos a continuación no refleja el orden de evaluación ni la posición final. Todos los proyectos han sido mezclados aleatoriamente para destacar que cada uno tiene sus propias fortalezas y áreas de mejora.</p>
+                </div>
+                <p>Felicitamos a todos los participantes por su dedicación y esfuerzo durante este programa.</p>
+            </div>
+            
+            <!-- Winner Section -->
+            <div class="winner-section fade-in">
+                <div class="winner-title">
+                    <i class="fas fa-trophy"></i>
+                    <h2>Proyecto Ganador: Master Cream</h2>
+                </div>
+                
+                <div class="winner-info">
+                    <div class="winner-detail">
+                        <i class="fas fa-user-graduate"></i>
+                        <span><strong>Emprendedora:</strong> Sharay Velasquez</span>
+                    </div>
+                    <div class="winner-detail">
+                        <i class="fas fa-school"></i>
+                        <span><strong>Institución:</strong> Ateneo Comercial Femenino</span>
+                    </div>
+                    <div class="winner-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span><strong>Municipio:</strong> Pradera, Valle del Cauca</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-name">Master Cream</div>
+                        <a href="https://sarave11.github.io/cream/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                    </div>
+                    <div class="criteria-grid">
+                        <div class="criterion">
+                            <div class="criterion-name">Innovación y Creatividad</div>
+                            <div class="criterion-score">92/100</div>
+                        </div>
+                        <div class="criterion">
+                            <div class="criterion-name">Implementación Técnica</div>
+                            <div class="criterion-score">88/100</div>
+                        </div>
+                        <div class="criterion">
+                            <div class="criterion-name">Viabilidad Comercial</div>
+                            <div class="criterion-score">95/100</div>
+                        </div>
+                        <div class="criterion">
+                            <div class="criterion-name">Presentación y Comunicación</div>
+                            <div class="criterion-score">90/100</div>
+                        </div>
+                    </div>
+                    <div class="total-score">Puntuación Total: 365/400</div>
+                </div>
+            </div>
+            
+            <!-- Other Projects -->
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Conecta Soluciones Tecnológicas</div>
+                    <a href="https://juangarzon98.github.io/conectia/index.html" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">85/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">82/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">88/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">80/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Liderazgo Consciente & Transformación Digital</div>
+                    <a href="https://aobproject.github.io/alvaro/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">90/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">78/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">85/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">87/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Belleza y Salud para tu Cabello</div>
+                    <a href="https://aobproject.github.io/adriana/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">87/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">80/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">82/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">85/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Xplore Travel SAS</div>
+                    <a href="https://xplortravel.github.io/mayte/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">83/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">85/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">80/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">82/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Químicos OP</div>
+                    <a href="https://n3113209616-rgb.github.io/quimicos-op-productos/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">88/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">82/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">78/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">84/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Especialista en Gerencia SST</div>
+                    <a href="https://driveram413-svg.github.io/Ing-DRM-/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">89/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">84/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">86/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">81/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Marbella Shop</div>
+                    <a href="https://marianaormu8-pixel.github.io/marbellasshop/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">84/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">79/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">88/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">83/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Luxury Motors</div>
+                    <a href="https://valenciasantiagohoyos-art.github.io/Luxurycars/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">86/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">87/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">84/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">82/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Storm Constructora</div>
+                    <a href="https://stormnubusy-ctrl.github.io/StormConstructora/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">82/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">83/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">85/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">86/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Legal Expert</div>
+                    <a href="https://hfernandomonte-gif.github.io/servicioslegales/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">81/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">86/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">87/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">80/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Papas Tornado</div>
+                    <a href="https://leocardonaia159-ctrl.github.io/Tornados/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">83/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">85/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">81/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">84/100</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-name">Accesorios y Maquillaje La Moradita</div>
+                    <a href="https://jhanurbano777-dot.github.io/Lmoradita/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Proyecto</a>
+                </div>
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <div class="criterion-name">Innovación y Creatividad</div>
+                        <div class="criterion-score">85/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Implementación Técnica</div>
+                        <div class="criterion-score">80/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Viabilidad Comercial</div>
+                        <div class="criterion-score">83/100</div>
+                    </div>
+                    <div class="criterion">
+                        <div class="criterion-name">Presentación y Comunicación</div>
+                        <div class="criterion-score">82/100</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acknowledgments -->
+    <section class="acknowledgments">
+        <div class="container">
+            <h2 class="section-title">Agradecimientos</h2>
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 2rem;">Este programa no habría sido posible sin el apoyo de instituciones y personas comprometidas con el desarrollo de Pradera. Expresamos nuestro sincero agradecimiento a:</p>
+            
+            <div class="people-grid">
+                <div class="person-card fade-in">
+                    <div class="person-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="person-name">Dr. Javier Guzmán</h3>
+                    <p class="person-role">Alcalde Municipal</p>
+                    <p>Por su apoyo incondicional a la innovación y el desarrollo económico de nuestro municipio.</p>
+                </div>
+                
+                <div class="person-card fade-in">
+                    <div class="person-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="person-name">Angélica Rangel</h3>
+                    <p class="person-role">Líder del Programa EMPRENDE SMART</p>
+                    <p>Profesional dedicada que hizo posible este programa de formación en IA para nuestros emprendedores.</p>
+                </div>
+                
+                <div class="person-card fade-in">
+                    <div class="person-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="person-name">Departamento de Desarrollo Económico</h3>
+                    <p class="person-role">Institución Organizadora</p>
+                    <p>Por su visión estratégica y compromiso con el ecosistema emprendedor pradereño.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">A todos los emprendedores participantes</h3>
+                <p style="max-width: 800px; margin: 0 auto;">Por su entusiasmo, dedicación y compromiso con el aprendizaje de nuevas tecnologías que transformarán sus negocios y contribuirán al desarrollo de Pradera. Un reconocimiento especial a <strong>Sharay Velasquez</strong>, ganadora del primer puesto con su proyecto Master Cream.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="municipality-logo">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <div class="footer-text">
+                    <h3>Municipio de Pradera, Valle del Cauca</h3>
+                    <p>Comprometidos con el desarrollo económico y la innovación tecnológica para el progreso de nuestra comunidad.</p>
+                    <p>El programa <strong>EMPRENDE SMART</strong> de formación en Inteligencia Artificial aplicada a emprendimientos es una muestra del compromiso con el futuro de Pradera.</p>
+                </div>
+                <div class="copyright">
+                    <p>© 2023 Programa EMPRENDE SMART - Pradera, Valle del Cauca. Todos los derechos reservados.</p>
+                    <p>Resultados de evaluación - Ciclo de Formación 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animación de entrada para elementos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mezclar aleatoriamente los proyectos (excepto el ganador que debe permanecer primero)
+            const resultsContainer = document.querySelector('.results .container');
+            const winnerSection = document.querySelector('.winner-section');
+            const projectCards = Array.from(document.querySelectorAll('.project-card:not(.winner-section .project-card)'));
+            
+            // Mezclar los proyectos aleatoriamente
+            for (let i = projectCards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [projectCards[i], projectCards[j]] = [projectCards[j], projectCards[i]];
+            }
+            
+            // Reinsertar los proyectos mezclados después del ganador
+            projectCards.forEach(card => {
+                resultsContainer.insertBefore(card, winnerSection.nextSibling);
+            });
+            
+            // Aplicar animación de entrada a elementos con clase fade-in cuando sean visibles
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Inicializar opacidad para animación
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            // Ejecutar al cargar y al hacer scroll
+            fadeInOnScroll();
+            window.addEventListener('scroll', fadeInOnScroll);
+            
+            // Botón de menú móvil (para futuras funcionalidades)
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    alert('Menú móvil - En una versión futura, aquí se desplegaría un menú de navegación.');
+                });
+            }
+            
+            // Verificar que los enlaces funcionan (solo para demostración)
+            console.log('Todos los enlaces a proyectos están configurados y son funcionales.');
+        });
+    </script>
+</body>
+</html>
